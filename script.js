@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化標題動畫效果
     initMagicTitle();
     
+    // 初始化訪問計數器
+    initVisitCounter();
+    
     // 定義卡牌數據
     const cardData = {
         planet: [
@@ -47,6 +50,34 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: 12, name: '第十二宮' }
         ]
     };
+
+    // 初始化訪問計數器
+    function initVisitCounter() {
+        const namespace = 'dice-cards';
+        const key = 'visits';
+        
+        // 使用localStorage模擬總訪問次數
+        let totalVisits = localStorage.getItem('total-visits') || 0;
+        totalVisits = parseInt(totalVisits) + 1;
+        localStorage.setItem('total-visits', totalVisits);
+        
+        // 使用CountAPI來獲取和更新訪問次數
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visit-count').textContent = formatNumber(data.value);
+            })
+            .catch(error => {
+                console.error('訪問計數器獲取失敗:', error);
+                // 如果API請求失敗，使用localStorage的數值作為備用
+                document.getElementById('visit-count').textContent = formatNumber(totalVisits);
+            });
+    }
+    
+    // 格式化數字，添加千位分隔符
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     // 初始化魔幻標題效果
     function initMagicTitle() {
@@ -200,7 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
 宮位：${houseName}
 
 這個獨特的組合揭示了我的宇宙能量軌跡...
-`;
+
+#厭世的占星女巫 #占星卡牌占卜`;
         
         // 複製到剪貼簿
         navigator.clipboard.writeText(resultText)
