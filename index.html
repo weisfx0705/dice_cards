@@ -69,11 +69,26 @@
      <br>   
         
         <footer class="footer">
-            <p>設計：義守大學傳播與設計學院陳嘉暐老師 | 占星知識：雨聲老師｜2025</p>
-            <p style="margin-top: 10px;">網站訪問次數：<img src="https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fweisfx0705.github.io%2Fdice_cards" alt="訪問計數器"></p>
+            <p>設計：義守大學傳播與設計學院陳嘉暐老師 | 占星知識：雨聲老師｜2025 <span style="float: right;">網站訪問次數：<span id="visit-count">0</span></span></p>
         </footer>
     </div>
     
     <script src="script.js"></script>
+    <script>
+        // 簡單的訪問計數器實現
+        document.addEventListener('DOMContentLoaded', function() {
+            // 從localStorage獲取訪問次數
+            let count = localStorage.getItem('visitCount') || 0;
+            
+            // 增加訪問次數
+            count = parseInt(count) + 1;
+            
+            // 保存到localStorage
+            localStorage.setItem('visitCount', count);
+            
+            // 顯示在頁面上
+            document.getElementById('visit-count').textContent = count;
+        });
+    </script>
 </body>
 </html> 
