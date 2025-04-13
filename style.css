@@ -341,57 +341,14 @@ h2 {
     z-index: 10;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .footer p {
     margin: 0;
     transition: all 0.3s ease;
-    text-align: left;
 }
 
 .footer p:hover {
     color: #ffd700;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
-}
-
-.visitor-counter {
-    font-size: 0.9rem;
-    color: #ffd700;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.3rem 1rem;
-    background-color: rgba(26, 26, 74, 0.6);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    transition: all 0.3s ease;
-    margin-left: auto;
-}
-
-.visitor-counter:hover {
-    background-color: rgba(26, 26, 74, 0.8);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    transform: translateY(-2px);
-}
-
-#visit-count {
-    font-weight: bold;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700;
-    }
-    to {
-        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
-    }
 }
 
 @keyframes pulse {
