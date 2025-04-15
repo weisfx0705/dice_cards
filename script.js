@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
                            行星：${planetName}<br>
                            星座：${starName}<br>
                            宮位：${houseName}<br><br>
-                           這個獨特的組合揭示了您的宇宙能量軌跡...`;
+                           複製並張貼占卜結果，讓厭世女巫給予靈魂重擊`;
         
         document.getElementById('result-text').innerHTML = resultText;
         
