@@ -296,6 +296,13 @@ h2 {
     transform: translateY(1px);
 }
 
+.step-label {
+    font-weight: bold;
+    color: #ffff00;
+    margin-right: 5px;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.7);
+}
+
 .witch-link {
     background: #4b0082;
 }
