@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 2秒後恢復原樣
                 setTimeout(() => {
                     copyButton.classList.remove('copy-animation');
-                    copyButton.innerHTML = '<i class="fas fa-copy"></i> 複製結果';
+                    copyButton.innerHTML = '<span class="step-label">Step 1:</span> <i class="fas fa-copy"></i> 複製結果';
                 }, 2000);
             })
             .catch(err => {
