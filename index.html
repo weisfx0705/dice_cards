@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZS4JX67LB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DZS4JX67LB');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占星卡牌占卜</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="magic-title">
+            <span class="magic-letter" style="--i:1; --r:3deg;">占</span>
+            <span class="magic-letter" style="--i:2; --r:-2deg;">星</span>
+            <span class="magic-letter" style="--i:3; --r:5deg;">卡</span>
+            <span class="magic-letter" style="--i:4; --r:-4deg;">牌</span>
+            <span class="magic-letter" style="--i:5; --r:2deg;">占</span>
+            <span class="magic-letter" style="--i:6; --r:-3deg;">卜</span>
+            <div class="title-stars"></div>
+        </h1>
+        <p class="instructions">從每堆牌中各選擇一張，探索您的命運軌跡</p>
+        
+        <div class="card-section">
+            <div class="card-pile">
+                <h2>🌕行星</h2>
+                <div class="cards" id="planet-cards"></div>
+                <div class="selected-card" id="selected-planet"></div>
+                <p class="card-name" id="planet-name"></p>
+            </div>
+            
+            <div class="card-pile">
+                <h2>🔮星座</h2>
+                <div class="cards" id="star-cards"></div>
+                <div class="selected-card" id="selected-star"></div>
+                <p class="card-name" id="star-name"></p>
+            </div>
+            
+            <div class="card-pile">
+                <h2>🏛️宮位</h2>
+                <div class="cards" id="house-cards"></div>
+                <div class="selected-card" id="selected-house"></div>
+                <p class="card-name" id="house-name"></p>
+            </div>
+        </div>
+        
+        <div class="results" id="results">
+            <h2>占卜結果</h2>
+            <div id="result-text"></div>
+            <div class="result-actions">
+                <button id="copy-button" class="action-button">
+                    <span class="step-label">Step 1:</span> <i class="fas fa-copy"></i> 複製結果
+                </button>
+                <a href="https://chatgpt.com/g/g-67fe1e63e11c8191bfcfc35261661c67-yan-shi-nu-wu" target="_blank" class="action-button witch-link">
+                    <span class="step-label">Step 2:</span> <i class="fas fa-hat-wizard"></i> 諮詢厭世女巫
+                </a>
+            </div>
+        </div>
+        
+        <button class="reset-button" id="reset-button">重新抽牌</button>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>   
+        
+        <footer class="footer">
+            <p>設計：義守大學傳播與設計學院陳嘉暐老師 | 占星知識：雨聲老師｜2025 </p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html> 
